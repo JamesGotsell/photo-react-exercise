@@ -1,5 +1,5 @@
 
-src 
+```src 
 .
 
 +-- Photos
@@ -10,3 +10,5 @@ src
 +-- App.js
 +-- Root.js
 +-- index.js 
+
+```
