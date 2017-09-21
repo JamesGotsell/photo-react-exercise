@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ListItem } from 'material-ui/List'
 import Avatar from 'material-ui/Avatar'
-import { LARGE } from 'material-ui/utils/withWidth'
+// import { LARGE } from 'material-ui/utils/withWidth'
 import View from '../layout/View'
 import { Route, Switch } from 'react-router-dom'
 import PhotoContainer from './PhotoContainer'
 
-const PhotoList = ({photos =[], match , history , width }) => {
+const PhotoList = ({photos =[], match , history  }) => {
     const showPhoto = (photo) => {
         history.push(`/photos/${photo.id}`)
       }
@@ -31,7 +31,6 @@ const PhotoList = ({photos =[], match , history , width }) => {
         return (
             <View style={{ display: 'flex' }}>
               <Route
-                exact={width < LARGE}
                 path={`${match.url}`}
                 render={() => listItems }
               />
@@ -47,6 +46,5 @@ export default PhotoList
 PhotoList.propTypes = {
           photos: PropTypes.array.isRequired,
           history: PropTypes.object.isRequired,
-          match: PropTypes.object.isRequired,
-          width: PropTypes.number.isRequired
+          match: PropTypes.object.isRequired
 }

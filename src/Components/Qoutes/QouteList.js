@@ -8,7 +8,7 @@ import { Route, Switch } from 'react-router-dom'
 import QouteContainer from './QouteContainer'
 import rickAndMorty from 'rick-and-morty';
 
-const PhotoList = ({quotes =[], match , history , width }) => {
+const QuoteList = ({quotes =[], match , history , width }) => {
     const showQuote = (quote) => {
         history.push(`/qoutes/${quote.id}`)
       }
@@ -43,9 +43,9 @@ const PhotoList = ({quotes =[], match , history , width }) => {
           )
         
  }       
-export default PhotoList
+export default QuoteList
         
-PhotoList.propTypes = {
+QuoteList.propTypes = {
           photos: PropTypes.array.isRequired,
           history: PropTypes.object.isRequired,
           match: PropTypes.object.isRequired,

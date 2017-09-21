@@ -7,7 +7,7 @@
 import React, { Component } from 'react'
 // import withWidth from 'material-ui/utils/withWidth'
 import QouteItem from './QouteItem'
-import rickAndMorty from 'rick-and-morty';
+// import rickAndMorty from 'rick-and-morty';
 
 import { fetchQoute } from '../../api/quotes'
 
@@ -37,10 +37,7 @@ class QouteContainer extends Component {
 
   render() {
     return (
-       <div>
-        {/* <img src={rickAndMorty.random()} /> */}
-        boom
-       </div>
+      <QouteItem /> 
    
     )
   }

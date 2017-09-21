@@ -13,7 +13,7 @@ class PhotoContainer extends Component {
   }
 
   componentDidMount() {
-        this.fetchPhoto()
+        this.fetchPhoto(this.props.match.params.id)
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.id !== nextProps.match.params.id) {
@@ -23,7 +23,7 @@ class PhotoContainer extends Component {
 
   fetchPhoto = (id) => {
     fetchPhoto(id).then((data) => {
-        this.setState({id : data})
+        this.setState({photo : data})
     }).catch((err)=> {
         console.log(err)
     })
@@ -31,7 +31,11 @@ class PhotoContainer extends Component {
 
   render() {
     return (
-            <PhotoItem photo={this.state.photo} />
+            <PhotoItem 
+            photo={this.state.photo} 
+            match={this.props.match}
+            history={this.props.history}
+            />
     )
   }
 }

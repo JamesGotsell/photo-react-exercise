@@ -6,9 +6,9 @@ import PhotoListContainer from './Photos/PhotoListContainer'
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super()
-    }
+  // constructor() {
+  //   super()
+  //   }
     
   
   render() {

@@ -4,7 +4,7 @@ import QouteList from './QouteList'
 
 import { fetchQoutes } from '../../api/quotes'
 
-class QouteListContainer extends Component {
+class QoutesListContainer extends Component {
   constructor() {
     super()
     this.state = {
@@ -16,14 +16,14 @@ class QouteListContainer extends Component {
     fetchQoutes()
     .then((data) => {
         this.setState({ quotes: data })
-
+        console.log(this.state.quotes)
     }).catch((err)=> {
         console.log(err)
     })
   }
 
   render() {
-    console.log(this.state.quotes)
+    console.log("boom")
     return (
         <QouteList
         quotes={this.state.quote}
@@ -34,4 +34,4 @@ class QouteListContainer extends Component {
   }
 }
 
-export default QouteListContainer
+export default QoutesListContainer
