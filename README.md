@@ -25,5 +25,5 @@
 -  display qoutes list 
 - displaly quote item 
 - create two new pages that routes from qouteItem 
-- create a sticky nav - refer to nav drawer example 
+- create a sticky nav - refer to nav drawer example  --- done 
 - do all routing for the project  

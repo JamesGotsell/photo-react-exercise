@@ -28,6 +28,7 @@
   height: 40px;
   color: white;
   background-color: black;
-  justify-content: center;
-
+  justify-content: space-around;
+  align-items: center;
 }
+
