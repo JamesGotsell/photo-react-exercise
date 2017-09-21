@@ -5,7 +5,7 @@ import Avatar from 'material-ui/Avatar'
 import { LARGE } from 'material-ui/utils/withWidth'
 import View from '../layout/View'
 import { Route, Switch } from 'react-router-dom'
-import QouteContainer from './QouteContainer'
+import QouteItemContainer from './QouteItemContainer'
 import rickAndMorty from 'rick-and-morty';
 
 const QuoteList = ({quotes =[], match , history , width }) => {
@@ -37,7 +37,7 @@ const QuoteList = ({quotes =[], match , history , width }) => {
                 render={() => listItems }
               />
               <Switch>
-                <Route path={`${match.url}/:id`} component={QouteContainer} />  
+                <Route path={`${match.url}/:id`} component={QouteItemContainer} />  
               </Switch>
             </View>
           )

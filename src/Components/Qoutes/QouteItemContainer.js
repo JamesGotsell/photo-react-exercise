@@ -11,7 +11,7 @@ import QouteItem from './QouteItem'
 
 import { fetchQoute } from '../../api/quotes'
 
-class QouteContainer extends Component {
+class QouteItemContainer extends Component {
   constructor() {
     super()
     this.state = {
@@ -43,4 +43,4 @@ class QouteContainer extends Component {
   }
 }
 
-export default QouteContainer
+export default QouteItemContainer

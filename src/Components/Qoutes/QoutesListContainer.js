@@ -23,10 +23,10 @@ class QoutesListContainer extends Component {
   }
 
   render() {
-    console.log("boom")
+
     return (
         <QouteList
-        quotes={this.state.quote}
+        quotes={this.state.quotes}
         match={this.props.match}
         history={this.props.history}
          />
