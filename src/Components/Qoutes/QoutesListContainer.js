@@ -13,6 +13,7 @@ class QoutesListContainer extends Component {
   }
 
   componentDidMount() {
+    console.log('hello')
     fetchQoutes()
     .then((data) => {
         this.setState({ quotes: data })

@@ -10,21 +10,21 @@ class App extends Component {
   // constructor() {
   //   super()
   //   }
-    
-  
+
+
   render() {
     return (
-    
+
       <div className="App">
        <Nav />
        <div className="view-container">
        <Switch>
             <Route exact path='/' component={Home} />
             <Route  path="/photos" component={PhotoListContainer} />
-            <Route  path="/quotes" component={QoutesListContainer} />
+            <Route  path="/qoutes" component={QoutesListContainer} />
           </Switch>
        </div>
-      
+
       </div>
     );
   }
