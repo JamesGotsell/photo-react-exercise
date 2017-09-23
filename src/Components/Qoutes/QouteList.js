@@ -8,21 +8,21 @@ import { Route, Switch } from 'react-router-dom'
 import QouteItemContainer from './QouteItemContainer'
 import rickAndMorty from 'rick-and-morty';
 
-const QuoteList = ({quotes =[], match , history , width }) => {
-    const showQuote = (quote) => {
-        history.push(`/qoutes/${quote.id}`)
+const QuoteList = ({qoutes =[], match , history , width }) => {
+    const showQuote = (qoute) => {
+        history.push(`/qoutes/${qoute.id}`)
       }
       let listItems
       let rickNMorty = rickAndMorty.random();
-        if (quotes.length === 0) {
+        if (qoutes.length === 0) {
           listItems = <View>Loading...</View>
         } else {
           listItems = ( 
             <View>
-              { quotes.map(quote => (
+              { qoutes.map(qoute => (
                 <ListItem
-                  onClick={() => { showQuote(quote) }} key={quote.id} style={{color: "black"}}
-                  primaryText={quote.what}
+                  onClick={() => { showQuote(qoute) }} key={qoute.id} style={{color: "black"}}
+                  primaryText={qoute.what}
                   rightAvatar={<Avatar src={rickNMorty} />}
                 />
               ))}
@@ -46,7 +46,7 @@ const QuoteList = ({quotes =[], match , history , width }) => {
 export default QuoteList
         
 QuoteList.propTypes = {
-          photos: PropTypes.array.isRequired,
+          qoutes: PropTypes.array.isRequired,
           history: PropTypes.object.isRequired,
           match: PropTypes.object.isRequired,
           width: PropTypes.number.isRequired

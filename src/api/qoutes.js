@@ -4,8 +4,8 @@ export const fetchQoutes = () => (
     }).then((response) => response.json())
   )
 
-  export const fetchQoute = (quote) => (
-    fetch(`../../data/rickNMorty/${quote}.json`, {
+  export const fetchQoute = (qoute) => (
+    fetch(`../../data/rickNMorty/${qoute}.json`, {
         method: 'get'
     }).then((response) => response.json())
   )

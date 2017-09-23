@@ -9,7 +9,7 @@ import React, { Component } from 'react'
 import QouteItem from './QouteItem'
 // import rickAndMorty from 'rick-and-morty';
 
-import { fetchQoute } from '../../api/quotes'
+import { fetchQoute } from '../../api/qoutes'
 
 class QouteItemContainer extends Component {
   constructor() {
@@ -29,7 +29,7 @@ class QouteItemContainer extends Component {
   }
   fetchQuote = (id) => {
     fetchQoute(id).then((data) => {
-        this.setState({quote : data})
+        this.setState({qoyte : data})
     }).catch((err)=> {
         console.log(err)
     })
