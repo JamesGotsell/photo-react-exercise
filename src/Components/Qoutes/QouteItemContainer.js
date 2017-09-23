@@ -15,7 +15,7 @@ class QouteItemContainer extends Component {
   constructor() {
     super()
     this.state = {
-      quote: []
+      qoute: []
     }
   }
   componentDidMount() {
@@ -29,7 +29,7 @@ class QouteItemContainer extends Component {
   }
   fetchQuote = (id) => {
     fetchQoute(id).then((data) => {
-        this.setState({qoyte : data})
+        this.setState({qoute : data})
     }).catch((err)=> {
         console.log(err)
     })
@@ -37,7 +37,7 @@ class QouteItemContainer extends Component {
 
   render() {
     return (
-      <QouteItem /> 
+      <QouteItem/> 
    
     )
   }

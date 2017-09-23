@@ -1,4 +1,5 @@
- [
+ module.exports = {
+   [
       {
         "id": "1x1.001",
         "who": "Rick",
@@ -294,3 +295,4 @@
         "when": "Season 2, Episode 7"
       }
   ]
+ }

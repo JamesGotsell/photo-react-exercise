@@ -8,7 +8,7 @@ import { Route, Switch } from 'react-router-dom'
 import QouteItemContainer from './QouteItemContainer'
 import rickAndMorty from 'rick-and-morty';
 
-const QuoteList = ({qoutes =[], match , history , width }) => {
+const QuoteList = ({qoutes =[], match , history }) => {
     const showQuote = (qoute) => {
         history.push(`/qoutes/${qoute.id}`)
       }
@@ -32,7 +32,7 @@ const QuoteList = ({qoutes =[], match , history , width }) => {
         return (
             <View style={{ display: 'flex' }}>
               <Route
-                exact={width < LARGE}
+               
                 path={`${match.url}`}
                 render={() => listItems }
               />
@@ -49,5 +49,5 @@ QuoteList.propTypes = {
           qoutes: PropTypes.array.isRequired,
           history: PropTypes.object.isRequired,
           match: PropTypes.object.isRequired,
-          width: PropTypes.number.isRequired
+          
 }
